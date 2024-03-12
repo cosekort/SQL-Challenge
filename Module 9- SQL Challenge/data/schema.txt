@@ -1,0 +1,35 @@
+Departments
+----
+DepartmentNumber PK varchar FK >- Department_Manager.DepartmentNumber
+DepartmentName varchar 
+
+Departement_Employees
+----
+EmployeeNumber PK int FK >- Employees.EmployeeNumber
+DepartmentNumber varchar PK
+
+
+Department_Manager 
+----
+DepartmentNumber PK varchar FK >- Departement_Employees.DepartmentNumber
+EmployeeNumber int PK 
+
+Employees 
+----
+EmployeeNumber PK int FK >- Salaries.EmployeeNumber
+EmployeeTitle varchar FK >- Titles.TitleID
+BirthDate date
+FirstName string
+LastName String 
+Sex varchar(1)
+HireDate date
+
+Titles 
+----
+TitleID PK varchar
+Title string
+
+Salaries
+----
+EmployeeNumber PK int 
+Salary int
